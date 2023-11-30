@@ -11,3 +11,159 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 15px;
+}
+.col-3{
+  max-width: 25%;
+  padding: 15px;
+}
+img {
+  width: 100%;
+}
+.hero{
+ padding: 15px;
+  margin: 0 auto;
+}
+.hero img{
+  width: 100%;
+  height: 100vh;
+
+}
+.move-img{
+  width: 100%;
+  /*height: 100%;*/
+  object-fit: cover;
+}
+.col-6{
+  max-width: 50%;
+  padding: 15px;
+}
+h1,p,h2,h3,h4,h5,h6 {
+  font-family: Tahoma, Arial, Verdana, sans-serif;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 700;
+}
+.moves_title{
+  color:  rgba(0,0,0,.6);
+  margin: 20px 0;
+}
+.moves_date{
+  color:  rgba(0,0,0,.6);
+
+}
+.movie-box p{
+  color: rgba(0,0,0,.6);
+  font-size: 14px;
+}
+.moves_info{
+  padding: 30px 0;
+}
+.moves_info p{
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 2;
+  color: #000;
+}
+.moves_info h2{
+  font-size: 22px;
+  font-weight: 600;
+}
+
+li{
+  list-style: none;
+}
+li h3{
+  font-size: 18px;
+  font-weight: 600;
+
+}
+li p{
+  font-size: 13px;
+  color: #000;
+}
+li h3:hover{
+  color: #f50;
+}
+li p:hover{
+  color: #f50;
+}
+ul{
+
+  padding: 20px;
+  overflow: scroll;
+  width: 100%;
+  height: 350px;
+}
+.move_rating{
+  font-size: 32px;
+  font-weight: 700;
+  color: #3bb33b;
+}
+.move_popular{
+  color: rgba(0,0,0,.6);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+.move_actors{
+  color: #f50;
+  margin-top: 30px;
+}
+.trailer_container h2{
+  margin-bottom: 20px;
+}
+.trailer_container{
+  padding-top: 30px;
+}
+.box-title{
+  color: #f50;
+  text-decoration:none;
+}
+
+header{
+
+  background-color: #141414;
+  padding: 30px 0;
+}
+.header-container{
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav{
+  display: flex;
+  gap: 80px;
+}
+.logo-img{
+  width: 250px;
+
+}
+
+.homeBtn, .searchBtn{
+  padding: 10px 25px;
+  background: -webkit-gradient(linear,left top,right top,from(#ff5c4d),color-stop(26.56%,#eb469f),color-stop(75%,#8341ef),to(#3f68f9));
+  text-decoration: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+}
