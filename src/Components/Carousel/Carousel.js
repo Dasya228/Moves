@@ -26,6 +26,10 @@ const Carousel = ({moves}) => {
                     moves.map(move => (
                         <SwiperSlide key={move.id}>
                             <img src={BACKDROP_URL + move.backdrop_path} alt={move.title}/>
+
+                            {/*<div>*/}
+                            {/*    <img src={PAGE_URL+move.poster_path}/>*/}
+                            {/*</div>*/}
                         </SwiperSlide>
                     ))
                 }</Swiper>

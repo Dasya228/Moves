@@ -17,10 +17,13 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background: #000;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .row {
@@ -63,11 +66,11 @@ h1{
   font-weight: 700;
 }
 .moves_title{
-  color:  rgba(0,0,0,.6);
+  color:  grey;
   margin: 20px 0;
 }
 .moves_date{
-  color:  rgba(0,0,0,.6);
+  color:  grey;
 
 }
 .movie-box p{
@@ -77,11 +80,11 @@ h1{
 .moves_info{
   padding: 30px 0;
 }
-.moves_info p{
+span{
   margin: 20px 0;
   font-size: 16px;
   line-height: 2;
-  color: #000;
+  color: #fff;
 }
 .moves_info h2{
   font-size: 22px;
@@ -98,7 +101,7 @@ li h3{
 }
 li p{
   font-size: 13px;
-  color: #000;
+  color: #fff;
 }
 li h3:hover{
   color: #f50;
@@ -119,7 +122,7 @@ ul{
   color: #3bb33b;
 }
 .move_popular{
-  color: rgba(0,0,0,.6);
+  color: grey;
   font-size: 13px;
   margin-bottom: 20px;
 }
@@ -166,4 +169,53 @@ nav{
   border-radius: 15px;
   color: #fff;
   font-size: 18px;
+ border: none;
+  cursor: pointer;
+}
+.mySwiper{
+  height: 100vh;
+}
+.searchInput{
+  padding: 10px 25px;
+background: rgb(118, 118, 118);
+  border-radius: 15px;
+  color: white;
+  font-size: 15px;
+ border: none;
+}
+.searchInput::placeholder{
+  color: white;
+}
+.search-cont{
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.box{
+  background: linear-gradient( 149deg, #192247 0%, #210e17 96.86% );
+  padding: 25px 30px;
+  border-radius: 10px;
+}
+.box h3:hover{
+  color: #f50;
+}
+.box img{
+  border-radius: 15px;
+}
+h1,h2,h3,h4,h5,h6{
+  color: rgba(255,255,255);
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: black;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 3px solid black;
 }
