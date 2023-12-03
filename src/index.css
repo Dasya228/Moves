@@ -91,6 +91,12 @@ span{
   font-weight: 600;
 }
 
+.inner-box{
+  display: flex;
+  flex-direction: column;
+
+}
+
 li{
   list-style: none;
 }

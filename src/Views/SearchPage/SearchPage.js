@@ -35,7 +35,7 @@ axios(`https://api.themoviedb.org/3/search/movie?language=ru-RU&api_key=${API_KE
                         </div>
                         <div className="col-6">
                             <h1>{movie.title}</h1>
-                            <div className={'moves_info'}>
+                            <div className={'moves_info inner-box'}>
                                 <h2>О Фильме</h2>
                                 <span>{movie.overview}</span>
                                <Link to={`/moves/${movie.id}`}> <button className={'searchBtn'}>Смотреть фильм</button></Link>
