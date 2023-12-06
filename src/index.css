@@ -25,6 +25,19 @@ body {
   margin: 0 auto;
   padding-top: 50px;
 }
+.logo_title{
+  font-family: Monoton,sans-serif;
+  text-decoration: none;
+}
+.logo-wrap{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-wrap svg{
+  fill: white;
+}
 
 .row {
   display: flex;
@@ -230,5 +243,29 @@ background: rgb(118, 118, 118);
   display: flex;
   gap: 10px;
 }
-
-
+.pagination-container{
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.btn-pagination{
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.btn-pagination:hover{
+  color: #f50;
+}
+.innerBtn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.innerBtn svg{
+  fill: white;
+}
