@@ -25,11 +25,19 @@ const Carousel = ({moves}) => {
                 {
                     moves.map(move => (
                         <SwiperSlide key={move.id}>
-                            <img src={BACKDROP_URL + move.backdrop_path} alt={move.title}/>
+                            <div className={'carousel-img'}
+                            style={{ background: `url(${BACKDROP_URL + move.backdrop_path})`}}
+                            >
+                                <div className={'poster-content'}>
+                                    <img src={PAGE_URL+move.poster_path} className={'carousel-poster'}/>
+                                   <div style={{maxWidth:'400px'}}>
+                                       <h3>{move.title}</h3>
+                                       <span>{move.overview}</span>
+                                   </div>
+                                </div>
+                            </div>
 
-                            {/*<div>*/}
-                            {/*    <img src={PAGE_URL+move.poster_path}/>*/}
-                            {/*</div>*/}
+
                         </SwiperSlide>
                     ))
                 }</Swiper>
