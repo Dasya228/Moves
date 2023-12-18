@@ -1,36 +1,50 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
 import MoveList from "../../Components/MoveList/MoveList";
-import {BASE_URL, API_KEY} from "../../Config/Config";
 import Carousel from "../../Components/Carousel/Carousel";
-import {useSearchParams} from "react-router-dom";
-import Pagination from "../../Components/Pagination/Pagination";
+import {useLocation, useNavigate, useSearchParams} from "react-router-dom";
+// import Pagination from "../../Components/Pagination/Pagination";
+import {useDispatch, useSelector} from "react-redux";
+import {getMovies} from "../../redux/MoveAction/MoveAction";
+import  queryString from "query-string";
+import {Container, Pagination} from "@mui/material";
 
 
 const HomePage = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const {moves} = useSelector((state) => state);
 
-    const [moves, setMoves] = useState([])
-    const [pageParam, setPageParam] = useSearchParams('page')
-    const [page, setPage] = useState(pageParam.get('page') || 1)
+    const queryParams = queryString.parse(location.search);
+    const currentPageFromQuery = parseInt(queryParams.page, 10) || 1;
+
+    const [currentPage, setCurrentPage] = useState(currentPageFromQuery);
 
     useEffect(() => {
-        axios(`${BASE_URL}discover/movie?language=ru-RU&api_key=${API_KEY}&page=${page}`)
-            .then(({data}) => setMoves(data.results))
-    }, [page]);
+        console.log("Setting currentPage:", currentPageFromQuery);
+        setCurrentPage(currentPageFromQuery);
+    }, [currentPageFromQuery]);
 
-    const handlePageChange = (argPage) => {
-        setPage(argPage)
-        setPageParam({page: argPage})
-    }
+    useEffect(() => {
+        dispatch(getMovies(currentPage));
+    }, [dispatch, currentPage]);
+
+    const totalPageCount = 10;
+
+    const handlePageChange = (event, newPage) => {
+        event.preventDefault();
+        setCurrentPage(newPage);
+        navigate(`?page=${newPage}`);
+    };
 
     return (
         <>
-            <Carousel moves={moves}/>
-            <div className={'container'}>
+            <Carousel/>
+            <Container className={'container'}>
 
                 <MoveList moves={moves}/>
-                <Pagination onClick={handlePageChange}/>
-            </div>
+                <Pagination onChange={handlePageChange} count={totalPageCount} page={currentPage} variant="outlined" shape="rounded"/>
+            </Container>
         </>
     )
 }

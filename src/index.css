@@ -296,3 +296,16 @@ display: flex;
   padding: 0 50px;
 
 }
+.MuiPagination-ul{
+  display: flex;
+  justify-content: center;
+  height: unset;
+}
+.MuiPagination-ul button{
+  background-color: transparent;
+  border-color: white;
+  color: white;
+}
+.css-1v2lvtn-MuiPaginationItem-root{
+  color: white !important;
+}
