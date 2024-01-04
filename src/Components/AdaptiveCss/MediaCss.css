@@ -1,0 +1,269 @@
+@media (max-width: 1024px) {
+    .header-container {
+        justify-content: space-around;
+    }
+
+    nav {
+        gap: 40px;
+    }
+
+    .homeBtn, .searchBtn {
+        font-size: 16px;
+    }
+
+    .carousel-img {
+        height: 70vh;
+    }
+
+    .poster-content img {
+        display: none;
+    }
+
+    .row {
+        margin: unset;
+    }
+
+    .inner-row {
+        gap: unset;
+        justify-content: space-around;
+    }
+
+    .search-container {
+        padding: 50px 100px;
+    }
+
+    .trailer_container {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-container {
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+
+    .logo-wrap {
+        gap: 15px;
+    }
+
+    .logo-wrap svg {
+        width: 35px;
+    }
+
+    .logo_title {
+        font-size: 18px;
+    }
+
+    .searchBtn, .homeBtn {
+        font-size: 12px;
+    }
+
+    .move_overview {
+        font-size: 13px;
+        margin: unset;
+    }
+
+    .poster-content {
+        border-radius: unset;
+        padding: 0 30px;
+    }
+
+    .col-3 {
+        max-width: 50%;
+    }
+
+    .col-order {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .moves_title {
+        display: none;
+    }
+
+    .search-col {
+        max-width: 25%;
+    }
+
+    .move_name {
+        font-size: 30px;
+    }
+
+    .move_info {
+        font-size: 18px;
+    }
+
+    .move_titre {
+        font-size: 12px;
+    }
+
+    .move_rating {
+        text-align: right;
+        font-size: 20px;
+    }
+
+    .move_popular {
+        text-align: right;
+        font-size: 10px;
+    }
+
+    .actors-scroll {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .actors-scroll li {
+        width: 50%;
+    }
+
+    .actors-scroll img {
+        width: 50%;
+    }
+
+    li h3 {
+        font-size: 16px;
+    }
+
+    li p {
+        font-size: 11px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .poster-name {
+        display: none;
+    }
+
+    .footer-box__link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-container .searchBtn, .homeBtn {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -220px;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0 0 50px;
+        justify-content: center;
+        width: 220px;
+        height: 100%;
+        background: linear-gradient(149deg, #45172B 0.54%, #120C1F 75.04%);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        z-index: 999;
+
+    }
+
+    .mobile-menu.active {
+        transform: translateX(100%);
+    }
+
+    .mobile-menu__link {
+        text-decoration: none;
+        font-size: 18px;
+        margin-top: 15px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .mobile-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+    .poster-content{
+        align-items: flex-end;
+    }
+    .col-3{
+        max-width: 100%;
+    }
+    .movie-box h3{
+        font-size: 16px;
+    }
+    .inner-row{
+        flex-direction: column-reverse;
+    }
+    .move_rating{
+        text-align: left;
+    }
+    .move_popular{
+        text-align: left;
+    }
+    .moves_date{
+        display: none;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .moves_info h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .moves_info span{
+        font-size: 13px;
+    }
+    .trailer_container h2 {
+        font-size: 20px;
+    }
+    .col-order{
+        order: 0;
+    }
+    .search-container{
+        padding: 40px;
+    }
+    .search-container h2{
+        font-size: 20px;
+    }
+    .searchInput{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+    .search-col h3{
+        display: none;
+    }
+    .rating-col{
+        display: none;
+    }
+.col-6{
+    max-width: 100%;
+}
+    }
+
+@media (max-width: 375px) {
+    .trailer_container{
+        padding: 20px;
+    }
+    .container{
+        padding-top: 20px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .trailer_container{
+        padding: 15px;
+    }
+    .container{
+        padding-top: 15px;
+    }
+
+}

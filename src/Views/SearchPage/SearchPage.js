@@ -18,7 +18,7 @@ axios(`https://api.themoviedb.org/3/search/movie?language=ru-RU&api_key=${API_KE
 
 
     return(
-        <div className={'container'}>
+        <div className={'container search-container'}>
             <h2>Найти фильм</h2>
      <div className={'search-cont'}>
          <input className={'searchInput'} placeholder={'Фильмы, сериалы'} type="text" onChange={(e)=>setSearch(e.target.value)}/>
@@ -28,20 +28,20 @@ axios(`https://api.themoviedb.org/3/search/movie?language=ru-RU&api_key=${API_KE
             {
                 searchResult.map((movie)=>(
                     <div key={movie.id} className={'row'}>
-                        <div className="col-3">
+                        <div className="col-3 search-col">
                             <img src={`${PAGE_URL}${movie.poster_path}`} alt=""/>
                             <h3>{movie.title}</h3>
                             <p className={'moves_date'}>{movie.release_date}</p>
                         </div>
                         <div className="col-6">
-                            <h1>{movie.title}</h1>
+                            <h1 className={'move_name'}>{movie.title}</h1>
                             <div className={'moves_info inner-box'}>
-                                <h2>О Фильме</h2>
-                                <span>{movie.overview}</span>
+                                <h2 className={'move_info'}>О Фильме</h2>
+                                <span className={'move_titre'}>{movie.overview}</span>
                                <Link to={`/moves/${movie.id}`}> <button className={'searchBtn'}>Смотреть фильм</button></Link>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-3 rating-col">
                             <p className={'move_rating'}>{movie.vote_average}</p>
                             <p className={'move_popular'}>{movie.popularity} оценки</p>
                             </div>

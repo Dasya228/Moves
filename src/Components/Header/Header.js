@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
 const Header = () => {
+    const [isOpen, setIsOpen]=useState();
+
     return (
         <header className={'header'}>
             <div className={'header-container'}>
@@ -13,8 +15,19 @@ const Header = () => {
                    <Link className={'homeBtn'} to={'/'}>Главное</Link>
                     <Link className={'searchBtn'} to={'/search'}>Найти фильм</Link>
                 </nav>
+                <div className={'mobile'}>
+                    <button className={'mobile-btn'} onClick={()=>setIsOpen(!isOpen)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill:'white'}}><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg>
+                    </button>
+                </div>
+                <div className={`mobile-menu show ${isOpen?'active':''}`}>
+                    <Link className={'mobile-menu__link'} to={'/'}>Главное</Link>
+                    <Link className={'mobile-menu__link'} to={'/search'}>Найти фильм</Link>
+                </div>
             </div>
+
         </header>
     )
+
 }
 export default Header
