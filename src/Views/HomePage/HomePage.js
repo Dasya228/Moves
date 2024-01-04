@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import MoveList from "../../Components/MoveList/MoveList";
 import Carousel from "../../Components/Carousel/Carousel";
 import {useLocation, useNavigate, useSearchParams} from "react-router-dom";
-// import Pagination from "../../Components/Pagination/Pagination";
 import {useDispatch, useSelector} from "react-redux";
 import {getMovies} from "../../redux/MoveAction/MoveAction";
 import  queryString from "query-string";
@@ -16,7 +15,7 @@ const HomePage = () => {
     const {moves} = useSelector((state) => state);
 
     const queryParams = queryString.parse(location.search);
-    const currentPageFromQuery = parseInt(queryParams.page, 10) || 1;
+    const currentPageFromQuery = parseInt(queryParams.page, 20) || 1;
 
     const [currentPage, setCurrentPage] = useState(currentPageFromQuery);
 
@@ -29,7 +28,7 @@ const HomePage = () => {
         dispatch(getMovies(currentPage));
     }, [dispatch, currentPage]);
 
-    const totalPageCount = 10;
+    const totalPageCount = 20;
 
     const handlePageChange = (event, newPage) => {
         event.preventDefault();

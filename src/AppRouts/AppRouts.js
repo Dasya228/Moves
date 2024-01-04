@@ -4,6 +4,7 @@ import HomePage from "../Views/HomePage/HomePage";
 import MovePage from "../Views/MovePage/MovePage";
 import Header from "../Components/Header/Header";
 import SearchPage from "../Views/SearchPage/SearchPage";
+import Footer from "../Components/Footer/Footer";
 
 const AppRouts =()=>{
     return(
@@ -14,6 +15,8 @@ const AppRouts =()=>{
                <Route path={'/moves/:id'} element={<MovePage/>}/>
                <Route path={'/search'} element={<SearchPage/>}/>
            </Routes>
+           <Footer/>
+
        </>
     )
 }

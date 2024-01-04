@@ -14,6 +14,8 @@ const MovePage = () => {
     const [move, setMove] = useState([])
     const [cast, setCast] = useState([])
     const [trailer, setTrailer] = useState([])
+
+
     useEffect(() => {
         const fetchMovie = async () => {
             await dispatch(getMoviesPage(id))
@@ -42,10 +44,10 @@ const MovePage = () => {
                 <div className={'row'}>
                     <div className="col-3">
                         <img src={`${PAGE_URL}${movie.poster_path}`} alt=""/>
-                        <h3>{movie.title}</h3>
+                        <h3 className={'poster-name'}>{movie.title}</h3>
                         <p className={'moves_date'}>{movie.release_date}</p>
                     </div>
-                    <div className="col-6">
+                    <div className="col-6 col-order">
                         <h1>{movie.title}</h1>
                         <p className={'moves_title'}>{movie.original_title}</p>
                         <div className={'moves_info'}>
@@ -55,14 +57,16 @@ const MovePage = () => {
                     </div>
                     <div className="col-3">
                         <p className={'move_rating'}>{movie.vote_average}</p>
-                        <span className={'move_popular'}>{movie.popularity} оценки</span>
+                        <p className={'move_popular'}>{movie.popularity} оценки</p>
                         <h3 className={'move_actors'}>В главных ролях:</h3>
-                        <ul>
+                        <ul className={'actors-scroll'}>
                             {
                                 cast.map(actor => (
                                     <li key={actor.id}>
                                         <h3>{actor.name}</h3>
                                         <p>{actor.character}</p>
+                                        <img className={'actorImg'} src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} alt=""/>
+
                                     </li>
                                 ))
                             }

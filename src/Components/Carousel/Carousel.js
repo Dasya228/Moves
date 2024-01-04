@@ -36,13 +36,13 @@ const Carousel = () => {
                     moves.map(move => (
                         <SwiperSlide key={move.id}>
                             <div className={'carousel-img'}
-                                 style={{background: `url(${BACKDROP_URL + move.backdrop_path})`}}
+                                 style={{background: `url(${BACKDROP_URL + move.backdrop_path})`, backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}
                             >
                                 <div className={'poster-content'}>
                                     <img src={PAGE_URL + move.poster_path} className={'carousel-poster'}/>
                                     <div style={{maxWidth: '400px'}}>
                                         <h3>{move.title}</h3>
-                                        <span>{move.overview}</span>
+                                        <span className={'move_overview'}>{move.overview}</span>
                                     </div>
                                 </div>
                             </div>
